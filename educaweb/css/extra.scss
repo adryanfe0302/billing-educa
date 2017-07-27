@@ -1,0 +1,514 @@
+// Unlimit Your Self / 17 March 2015 / nando@educa8.info 
+
+//* Var *//
+$border-radius0:0px;
+$border-radius1:5px;
+$border-radius2:10px;
+$border-radius3:50px;
+$border-radius4:100px;
+
+$padding-0:2px;
+$padding-1:5px;
+$padding-2:10px;
+$padding-3:15px;
+$padding-4:20px;
+$padding-5:40px;
+
+$bg-0:none;
+$bg-1:whitesmoke;
+$bg-2:#EAEAEA;
+$bg-3:#ddd;
+$bg-4:#fffce3;
+$bg-5:#333;
+
+$c-1:white;
+
+
+//* Var *//
+
+@font-face {font-family: vera;src: url(fontcss/vera.ttf);}
+@font-face {font-family: dancing;src: url(fontcss/dancing.otf);}
+@font-face {font-family: oswald;src: url(fontcss/oswald.otf);}
+@font-face {font-family: quick; src: url(fontcss/quicksregular.otf);}
+@font-face {font-family: marvel;src: url(fontcss/marvel.otf);}
+@font-face {font-family: Dosis-bold;src: url(fontcss/Dosis-Bold.otf);}
+@font-face {font-family: Dosis-light;src: url(fontcss/Dosis-Light.otf);}
+@font-face {font-family: Dosis-regular;src: url(fontcss/Dosis-Regular.otf);}
+*{margin:0px;}
+
+
+.border-radius0{
+    border-radius:$border-radius0;
+    }
+
+.navbar-brand{
+    img{
+        height:50px;
+        width:auto;
+       }
+    }
+
+.brandtop{padding-top:15px;
+    padding-bottom:20px;
+    }
+
+.slogan{
+    padding-top:15px;
+    padding-bottom:20px;
+    font-family:oswald;
+    font-size:16px;
+    }
+
+.navfont{
+    font-family:dosis-regular;
+    font-size:15px;
+    }
+
+.center{
+    display:inline;
+    }
+
+.padding-2{
+    padding:$padding-2;
+    }
+
+.padding-4{
+    padding:$padding-4;
+    }
+
+.padding-5{
+    padding:$padding-5;
+    }
+
+.ending{
+    color:white;
+    text-align:center;
+    font-family:roboto;
+    font-size:11px;
+    width:100%;
+    margin-top:50px;
+    }
+
+.bg-0{
+    background:$bg-0;
+    border:none;
+    box-shadow:none;
+    opacity:0.8;
+    padding-bottom:10px;
+    }
+
+.bg-1{
+    background:$bg-1;
+    }
+.bg-3{
+    background:$bg-3;
+    }
+.bg-4{
+    background:$bg-4;
+    }
+.bg-5{
+    background:$bg-5;
+    }
+
+
+.full-car{
+    width:100%;
+    }
+
+.hg-cost-top{
+  
+    min-height:520px;
+    }
+
+.hg-cost{
+    border-bottom:1px solid silver;
+    background-image:url(images/bg-blur.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-top:90px;
+    padding-bottom:30px;
+    border-bottom:1px solid silver;
+    min-height:520px;
+    }
+
+.hg-cost-2{
+    padding-top:60px;
+    padding-bottom:0px;
+    min-height:500px;
+    background:$bg-2;
+    }
+
+.logo{
+    background: none repeat scroll 0 0 white;
+    border-radius:$border-radius4;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    width: auto;
+    z-index: 1;
+    }
+
+.fa-inverse-2{
+    color:$bg-2;
+    }
+
+.text-footer{
+    color:white;
+    padding:5px;
+    li{ display:inline-block;
+        a{
+            color:white;
+            font-size:12px;
+            text-transform:uppercase;
+         }
+      }
+    }
+
+.embeedtop{
+    margin-top:23px;
+    }
+
+.head-title,.copyfaq{
+    font-family: oswald;
+    }
+.img-circle:hover {
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.3s;
+  border:1px solid #C18B34;
+  background: #EFBB6A; }
+
+.left-align{
+    text-align:left;
+    font-family: dosis-regular;
+    line-height:30px;
+    font-size:16px;padding-left:10px;
+    }
+.col-sm-5 h4{font-family:dosis-bold;padding-left:10px;border-bottom:1px solid #ddd;}
+.office-name{
+    font-family:dosis-bold;
+    }
+
+.right-align{
+    text-align:right;
+    font-family:dosis-regular;
+    }
+.col-sm-6 img,.col-sm-3 img,.col-sm-4 img{
+    max-width:100%;
+    width:auto;
+    }
+.center-align{
+    text-align:justify;
+    font-family:dosis-regular;
+    font-size:16px;
+    color:#333;
+    line-height:25px;
+    }
+
+.center-align-2{
+    font-family: dosis-regular;
+    font-size:20px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    border-bottom:1px solid #444;
+    }
+
+
+.float1{
+    float:right;
+    }
+
+.foot-bg-extra{
+    background:#191919;
+    }
+
+.row-bor-bot{
+    padding-top:40px;
+    border-bottom:1px solid #ddd;
+    font-size:12px;
+    min-height:350px;
+    }
+
+.row-bor-top{
+    padding-top:40px;
+    font-size:12px;
+    min-height:350px;
+    border-top:1px solid white;
+    }
+
+
+.row-bor-bot:hover{
+  
+    } 
+
+.border-bot{
+    border-bottom:1px solid silver;
+    }
+
+.col-white{
+    color:$c-1;
+background : -moz-linear-gradient(0% 50% 0deg,rgba(38, 38, 38, 1) 0%,rgba(49, 49, 48, 1) 26.54%,rgba(77, 77, 76, 1) 72.49%,rgba(97, 97, 96, 1) 100%);
+  background : -webkit-linear-gradient(0deg, rgba(38, 38, 38, 1) 0%, rgba(49, 49, 48, 1) 26.54%, rgba(77, 77, 76, 1) 72.49%, rgba(97, 97, 96, 1) 100%);
+  background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(38, 38, 38, 1) ),color-stop(0.2654,rgba(49, 49, 48, 1) ),color-stop(0.7249,rgba(77, 77, 76, 1) ),color-stop(1,rgba(97, 97, 96, 1) ));
+  background : -o-linear-gradient(0deg, rgba(38, 38, 38, 1) 0%, rgba(49, 49, 48, 1) 26.54%, rgba(77, 77, 76, 1) 72.49%, rgba(97, 97, 96, 1) 100%);
+    }
+
+.c-1-slide{
+    color:$c-1;
+    text-shadow:1px 1px grey;
+    font-size:35px;
+    padding-top:50px;
+    padding-left:180px;
+    font-family:marvel;
+    }
+
+
+.dancing{
+    font-family:dancing;
+    text-transform:capitalize;
+    font-size:30px;
+    }
+
+.car-ext{
+    background:$bg-1;
+    }
+
+.carousel-control.right{
+    background:$bg-0;
+    }
+
+.slide-top{
+    height:400px;
+    background-image:url(images/bg-slide.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-bottom:1px solid #333;
+    }
+
+#myCarousel{height:400px;overflow:hidden;}
+
+.slide-bot{
+    padding-top:30px;
+    padding-bottom:20px;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background:$bg-2;
+    }
+
+.min-hg{
+    min-height:800px;
+    }
+
+.fixed{  
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    }
+
+.modal-martop{
+    margin-top:100px;
+    }
+
+.active-1{
+    background:orange;
+    color:orange;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:roboto,arial;
+    font-weight: 700;
+    text-transform: uppercase;
+    }
+
+.text-muted {
+    color: #555;
+    font-family:roboto;
+    font-size:12px;
+    }
+
+.text-primary {
+    color: #666;
+    font-family:vera;
+    }
+
+.text-left{
+    text-align:left;
+    list-style-type:square;
+    font-size:15px;
+    color:#666;
+    font-family:dosis-regular;
+    }
+.service-heading{font-family:dosis-bold;color:#555;}
+.ex-right {
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: 1s;
+    }
+
+.whattosay{
+    color:white;
+    font-family:oswald;
+    font-size:22px;
+    text-align:center;
+    margin-top:50px;
+    min-height:600px;
+    }
+
+.actived{
+    background:orange;
+    }
+
+#gohome,#goabout,#goservice,#gocontact{color:$bg-1;}
+#gohome:hover,#goabout:hover,#goservice:hover,#gocontact:hover{color:$bg-3;}
+
+.defenition-top{
+    text-align:center;
+    font-size:16px;
+    text-transform:uppercase;
+    font-weight:lighter;
+    font-family:dosis-regular;
+    letter-spacing:1px;
+    padding:$padding-4;
+    background : -moz-linear-gradient(50% 0% -90deg,rgba(223, 155, 53, 0.7) 0%,rgba(210, 124, 29, 0.8) 100%);
+    background : -webkit-linear-gradient(-90deg, rgba(223, 155, 53, 0.7) 0%, rgba(210, 124, 29, 0.8) 100%);
+    background : -webkit-gradient(linear,50% 0% ,50% 100% ,color-stop(0,rgba(223, 155, 53, 0.7) ),color-stop(1,rgba(210, 124, 29, 0.8) ));
+    background : -o-linear-gradient(-90deg, rgba(223, 155, 53, 0.7) 0%, rgba(210, 124, 29, 0.8) 100%);
+    background : -ms-linear-gradient(-90deg, rgba(223, 155, 53, 0.7) 0%, rgba(210, 124, 29, 0.8) 100%);
+    border-bottom:1px solid #a0601a;
+    border-radius:5px;
+    box-shadow:0 0px 2px black;
+
+    }
+
+.defenition-lab{
+    text-align:left;
+    font-size:18px;
+    text-transform:uppercase;
+    font-family:dosis-bold;
+    }
+
+.top-def{
+    border-top:1px solid grey;
+    }
+
+.defenition{
+    text-align:left;
+    font-size:14px;
+    font-family:dosis-regular;
+    list-style-type:square;
+    font-size:15px;
+    ul{list-style-type:square;
+        li{            
+            list-style-type:square;
+            line-height:35px;
+            font-size:17px;
+            text-shadow:1px 1px #333;
+            font-weight:lighter;
+          }
+        }
+    }
+
+.bg-slide-block{
+    height:400px;
+    width:140px;
+    overflow:hidden;
+    }
+
+.bg-slide-block img{
+     height:100%;
+     vertical-align:bottom;  
+    }
+
+.font-tab{
+    font-family:dosis-regular;
+    font-size:15px;
+    }
+
+
+
+.th-center{
+    text-align:center;
+    background:#ce8113;
+    font-size:12px;
+    text-shadow:1px 1px #555;
+    text-transform:uppercase;
+    }
+
+.td-center{
+    text-align:center;
+    background:$bg-2;
+    color:#333;
+    }
+.top-slogan{
+    font-family:dosis-light;
+    font-size:15px;
+    margin-top:12px;
+    text-transform:uppercase;
+    font-weight:lighter;
+    }
+
+.bg-foot{
+    background:#333;
+    border-bottom:1px solid #353535;
+    }
+#somecomponent{
+    border-radius:10px;
+    box-shadow:0 0px 2px #555;
+    }
+.ul-foot{
+    font-family:dosis-light;
+    font-size:15px;
+    li{
+        list-style-type:square;
+        }
+    }
+.bg-foot-ex{
+    padding-top:0px;
+    }
+.center-align p{font-family:dosis-bold;text-transform:uppercase;font-size:14px;}
+.center-align strong{font-family:dosis-regular;font-size:18px;border-bottom:1px solid silver;color:#555;}
+.cos-tit{
+    font-size:20px;
+    list-style-type:none;
+    margin-left:-15px;
+    background:#f9a33d;
+    padding-top:5px;
+    color:white;
+    border-bottom:1px solid #e08e2d;
+    border-left:1px solid #e08e2d;
+    border-right:1px solid #e08e2d;
+    }
+.cos-tit2{
+    font-size:20px;
+    padding-top:35px;
+    }
+.timeline-heading{font-family:dosis-bold;}
+.our-costumer{
+    border-top:0.5px solid #ddd;
+    }
+
+
+.extra-bg-ilu{
+    background:whitesmoke;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .top-slogan,.our-costumer,.c-1-slide,#somecomponent{
+        display:none;
+    }
+    
+}

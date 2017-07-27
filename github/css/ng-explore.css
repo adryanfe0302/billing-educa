@@ -1,0 +1,478 @@
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+
+	
+	@font-face {
+    font-family: "roboto-bold";
+    src: url("font/Roboto-Bold.ttf");
+	}
+	
+	@font-face {
+    font-family: "roboto-light";
+    src: url("font/Roboto-Light.ttf");
+	}
+	
+	@font-face {
+    font-family: "roboto-medium";
+    src: url("font/Roboto-Medium.ttf");
+	}
+	
+	@font-face {
+    font-family: "roboto-thin";
+    src: url("font/Roboto-Thin.ttf");
+	}
+	
+	@font-face {
+    font-family: "roboto-regular";
+    src: url("font/Roboto-Regular.ttf");
+	}
+	
+	@font-face {
+    font-family: "roboto-thin";
+    src: url("font/Roboto-Thin.ttf");
+	}
+	
+	@font-face {
+    font-family: "roboto-condensed";
+    src: url("font/roboto-condensed.ttf");
+	}
+	
+	#dvContainer{
+		width: 900px;
+		height:auto;
+		padding-bottom: 50px;
+		margin: 0px;
+		background: #F5F5F5;
+		margin-top: 70px;	
+/* 		background-image: url('../images/bg-con.png') */
+	}
+	
+	.head-invo{
+		height: 150px;
+		border-bottom: 1px solid #ddd;
+		
+	}
+	.body-invo{
+		border-top: 1px solid white;
+	}
+	.slogan{
+		font-family: roboto-condensed;
+		font-size: 24px;
+		text-indent: 70px;
+		margin-top: 3px;		
+	}
+	.address{
+		font-family: roboto-light;
+		font-size: 14px;
+		text-indent: 150px;
+		margin-top: -15px;
+	}
+	.log-img{
+		width: 100%;
+	}
+	.log-img img{
+		width: 400px;
+		padding-top: 20px;
+		padding-left: 50px;		
+	}
+	
+	.invo-no{
+		width: 100%;
+		color: white;
+		font-family: roboto-light;
+		font-size: 20px;
+		padding: 0px 0px;
+		margin-top: -29px;
+		text-indent: 70px;
+		padding-bottom: 10px;
+		
+	}
+	
+	.bi-to{
+		padding-left: 70px;
+		padding-top: 10px;
+	}
+	.lab{
+		font-family: roboto-regular;
+		font-size: 14px;
+		vertical-align: top;
+		width: 100px;
+	}
+	span{
+		font-family: roboto-regular;
+		font-size: 14px;
+	}
+	.schoolname{font-size: 14px;line-height: 25px;}
+	.inline-block{
+		display: inline-block;
+	}
+	.adjust{
+		padding-right: 20px
+	}
+	.adjust2{
+		padding-left: 20px;
+		width: 100px;
+	}
+	
+	.detail-bill{
+		margin-top: 10px;
+	}
+	.compname,.input-comp-name{font-family: roboto-medium;font-size: 16px;}
+
+	.label-info{
+	
+		padding-left: 70px;
+		margin-top: -35px;
+	}
+	.no,.des,.amount{
+		font-family: roboto-condensed;
+		font-size: 15px;
+		padding: 5px 10px; 
+		color: white;
+		display: inline-block;
+		margin-top: 7px;
+		line-height: 20px;
+	
+	}
+	.no{width: 50px;padding-left: 40px;vertical-align: top;font-size: 16px;}
+	.des{width: 380px;margin-left: -4px;vertical-align: top;}
+	.amount{
+		width: 140px;
+		text-align: left;
+		vertical-align: top;
+		text-indent: 5px;
+		display: inline;
+		line-height: 30px;
+		margin-top: 0px;
+		text-align: right;
+		display: inline-block;
+		
+		}
+	
+	.content-bill{
+		background: white;
+		width: auto;
+		height: auto;
+		min-height: 200px;
+	}
+/*
+	.content-bill:hover{
+		cursor: pointer;
+		background: whitesmoke;
+	}
+*/
+	
+	.row-bill{
+		padding-left: 70px;
+		border-bottom: 1px solid #ddd;
+		
+		background: whitesmoke;
+	}
+	
+	.col-black{
+		color: #333;
+	}
+	
+	.cur{
+		font-family: roboto-condensed;
+		font-size: 14px;
+		padding-left: 10px;
+	}
+	.total-bill{
+		
+		width: auto;
+		padding-left: 70px;
+		margin-top: -18px;
+		line-height: 0px;
+	
+	}
+	.paid-info{padding-left: 70px;padding-top: 50px;position: absolute;}
+	p{
+		font-family: roboto-condensed;
+		font-size: 15px;
+		margin: 2px;
+	}
+	li{
+		font-family: roboto-condensed;
+		font-size: 15px;
+		margin: 2px;
+	}
+	
+	.edu{
+		font-family: roboto-condensed;
+		font-size: 16px;
+		width: 100%;
+		margin-left: 570px;
+		
+	}
+	.lettersign{
+		font-family: roboto-condensed;
+		font-size: 16px;
+		width: 100%;
+		margin-left: 570px;
+		border-bottom: 1px solid #ccc;
+		line-height: 20px;
+	}
+	.font-bold{
+		font-family: roboto-bold;
+		font-size: 14px;
+	}
+	
+	input{
+		font-family: roboto-condensed;
+		font-size: 14px;
+		
+	}
+	
+	.hidden{display: none;}
+	
+	
+
+	button{
+		font-family: roboto-condensed;
+		font-size: 13px;
+		width: 100px;
+		margin-top: 15px;
+		
+	}
+	button:hover{
+		cursor: pointer;
+		opacity: 0.7;
+	}
+	.submit-page{float: right;margin-right: 10px;}
+	
+	.novo,.novolab{
+		font-size: 18px;
+		font-family: roboto-medium;
+		width: auto;
+		text-indent: 0px;
+		}
+	
+	.novo:hover{
+		cursor: pointer;
+		}
+	
+	.invoiceno{
+		font-family: roboto-medium;
+		font-size: 16px;
+		position: absolute;
+		text-indent: 5px;
+		margin-top: -2px;
+		width: 130px;
+		border-radius: 4px;
+		padding: 3px;
+		border: 1px solid #eee;
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ccc;
+		}
+	
+	.input-comp-name{
+		padding: 5px 0px;
+		margin-top: -5px;
+		text-indent: 5px;
+		width: 450px;
+		border-radius: 4px;
+		border: 1px solid #eee;
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ccc;
+		}
+		
+	.input-school-name{
+		padding: 5px 0px;
+		margin-top: 2px;
+		text-indent: 5px;
+		width: 450px;
+		border-radius: 4px;
+		border: 1px solid #eee;
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ccc;
+		}
+		
+	.input-att-name{
+		padding: 5px 0px;
+		margin-top: -5px;
+		text-indent: 5px;
+		width: 450px;
+		border-radius: 4px;
+		border: 1px solid #eee;
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ccc;
+		}
+	.input-date-name{
+		padding: 5px 0px;
+		margin-top: -5px;
+		text-indent: 5px;
+		width: 150px;
+		border-radius: 4px;
+		border: 1px solid #eee;
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ccc;
+		}
+	.input-duedate-name{
+		padding: 5px 0px;
+		margin-top: -5px;
+		text-indent: 5px;
+		width: 150px;
+		border-radius: 4px;
+		border: 1px solid #eee;
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ccc;
+		}
+	.input-desbill-name{
+		padding: 5px 0px;
+		margin-top: 0px;
+		text-indent: 5px;
+		width: 418px;
+		border-radius: 4px;
+		border: 1px solid #eee;
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ccc;
+		font-size: 16px;
+		}
+		
+	.input-amount-name{
+		padding: 5px 0px;
+		margin-top: 0px;
+		text-indent: 5px;
+		width: 150px;
+		text-align: right;
+		font-size: 16px;
+		padding-right: 10px;
+		border-radius: 4px;
+		border: 1px solid #eee;
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ccc;
+		}
+		.input-virtual-name{
+		padding: 5px 0px;
+		margin-top: -5px;
+		text-indent: 5px;
+		width: 180px;
+		border-radius: 4px;
+		border: 1px solid #eee;
+		border-left: 1px solid #ddd;
+		border-bottom: 1px solid #ccc;
+		font-size: 16px;
+		font-family: roboto-bold;
+		}
+
+	.btnwrap{
+		
+		border-bottom: 1px solid #ccc;
+		width: 620px;
+		padding-bottom: 20px;
+		padding-top: 10px;
+		position: fixed;
+		margin-top: -70px;
+		padding-left: 280px;
+		background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+
+
+
+		
+	.totalbil{
+		font-size: 15px;
+		font-family: roboto-condensed;
+		margin-top: 10px;
+		display: inline;
+		line-height: 0px;
+		position: absolute;
+		text-align: right;
+		vertical-align: top;
+		margin-top: -5px;
+		
+
+	}	
+	
+	.total-bill div:first-child{
+/* 		margin-left: 450px; */
+		vertical-align: top;
+		margin-top: -5px;
+		margin-left: 150px;
+		position: absolute;
+	
+	}
+
+	.total-bill > .amount{
+		margin-left: 520px;
+	}
+	.delrows{
+		width:50px;
+		margin-top: 7px;
+		vertical-align:top;
+		position: absolute;
+/* 		margin-left: 200px; */
+	}
+
+
+	.attention{
+		padding: 10px;
+		text-align: center;
+		font-size: 13px;
+		line-height: 20px;
+		font-family: roboto-condensed;
+		border: 1px solid orangered;
+		width: 400px;
+		margin-left: 150px;
+		
+	}
+
+	.box-end{
+		height: 32px;
+	}
+	.box-end img{
+		margin: 0px;
+		border-top: 1px solid white;	
+		border-bottom: 1px solid #ddd;	
+		marker-top:-10px;	
+	}
+
+
+	

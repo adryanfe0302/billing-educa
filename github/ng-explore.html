@@ -1,0 +1,196 @@
+<html ng-app='myApp' ng-controller='attCtrl'>
+<head>
+	
+<link rel="stylesheet" href="css/ng-explore.css">
+	
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/invoice.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>		
+	
+
+</head>
+<body>	
+
+	
+
+
+<div class='btnwrap inline-block'> 
+	<button id="btnContent" ng-click="Add();">Add</button>
+	<button id="submit" ng-click="Enter();">Submit</button>
+	<button id="print">Print</button>	
+</div>
+
+
+<div id='dvContainer' ng-repeat='info in infobill' style="">
+
+	<div class="head-invo">
+		<div class="log-img"> 
+			<img src="images/logo.png">
+		</div>
+		<div class="address">
+			Jln Talang Betutu, No 5, Jakarta Pusat | (021) 2942 6893
+		</div>
+		<div class="slogan">
+			Instantly Power Your School With Information Technology 
+		</div>	
+			
+	</div>
+	
+	<div class="body-invo">
+		
+		<img src="images/noinfobg.png" style="margin-top: 10px;">
+		<div class="invo-no" >
+			<p class="novolab inline-block">INVOICE NO</p>
+			<p class="novo show inline-block" ng-click="info.sembunyi=true" ng-hide="info.sembunyi" >{{info.invoiceno}}</p>
+			<input class="invoiceno" type="text" ng-show="info.sembunyi" ng-model="info.invoiceno">
+		</div>
+	
+		
+		<div class="bill-info">
+			<div class="bi-to">
+				<div class="lab inline-block"> Bill To </div>
+				<div class="bi-res inline-block">
+					<span class="compname show"  ng-click="info.sembunyi=true" ng-hide="info.sembunyi">{{info.compname}}  </span>
+					<input class="input-comp-name" type="text" ng-show="info.sembunyi" ng-model="info.compname" >
+					<br>
+					
+					<span class="schoolname show" ng-click="info.sembunyi=true" ng-hide="info.sembunyi">{{info.schoolname}} </span>	
+					<input class="input-school-name" type="text" ng-show="info.sembunyi" ng-model="info.schoolname" >
+				 </div>
+			</div>	
+
+			<div class="bi-to">
+				<div class="lab inline-block"> Attn </div>
+				<span class="attname show inline-block" ng-click="info.sembunyi=true" ng-hide="info.sembunyi"> {{info.attname}} </span>
+				<input class="input-att-name" type="text"  ng-show="info.sembunyi" ng-model="info.attname" >	
+			</div>	
+			<div class="bi-to">
+				<div class="bi-sub inline-block">
+					<div class="lab inline-block"> Date </div>
+					<span class="dateput show inline-block adjust" ng-click="info.sembunyi=true" ng-hide="info.sembunyi"> {{info.datename}} </span>
+					<input class="input-date-name" type="text"  ng-show="info.sembunyi" ng-model="info.datename" >
+				</div>	|
+				<div class="bi-sub inline-block">
+					<div class="lab adjust2 inline-block"> Due Date </div>
+					<span class="duedateput show inline-block" ng-click="info.sembunyi=true" ng-hide="info.sembunyi">{{info.duedatename}}  </span>
+					<input class="input-duedate-name" type="text"  ng-show="info.sembunyi" ng-model="info.duedatename" >
+				</div>		
+			</div>	
+		</div>	
+
+	</div>	
+	
+	
+	<div class="detail-bill">
+		<img src="images/bg-or.png" style="width: 100%;">
+		<div class="label-info">
+			<div class="no inline-block"> No </div>
+			<div class="des inline-block"> Deskripsi </div>
+			<div class="Amount inline-block"> Amount </div>
+		</div>
+		<div class="content-bill">
+			
+			<!-- append from here -->
+			<div class="row-bill" ng-repeat='data in rows'>	
+				<div class="no col-black inline-block no-row"> {{data.id}} </div>
+				<div class="des desbill col-black show inline-block" ng-click="data.sembunyi=true" ng-hide="data.sembunyi">{{data.desbill}}</div>
+				<input class="input-desbill-name" ng-show="data.sembunyi" type="text" ng-model="data.desbill" >
+				
+				<div class="amount show col-black inline-block" ng-click="data.amountsembunyi=true" ng-hide="data.amountsembunyi">{{data.amountbill|currency:'Rp '}}</div>
+				<input class="input-amount-name" type="text" ng-show="data.amountsembunyi" ng-model="data.amountbill">
+				<button class='delrows inline-block' ng-click='Hapusrows();'> Delete </button>
+				
+			</div>
+			
+					
+			
+		</div>
+		<div class="box-end">
+			<img src="images/bg-total.png" style="width: 100%;">
+			<div class="total-bill">
+				<div class="des col-black totalbil inline-block" style="text-align: right"> Total </div>
+				<div class="Amount col-black totalbil inline-block"> 
+					{{total |currency:'Rp '}}
+				 </div>
+			</div>		
+		</div>
+		<div class="box-end">
+			<img src="images/bg-total.png" style="width: 100%;">
+			<div class="total-bill">
+				<div class="des col-black totalbil inline-block" style="text-align: right"> PPh23(2%)</div>
+				<div class="Amount col-black totalbil inline-block"> 
+					{{total * '2' / '100' |currency:'Rp '}}
+				 </div>
+			</div>		
+		</div>
+		<div class="box-end">
+			<img src="images/bg-total.png" style="width: 100%;">
+			<div class="total-bill">
+				<div class="des col-black totalbil inline-block" style="text-align: right;font-family: roboto-medium"> Total Amount</div>
+				<div class="Amount col-black totalbil inline-block" style="font-family: roboto-medium"> 
+					{{ total - (total * '2' / '100')  |currency:'Rp '}}
+				 </div>
+			</div>		
+		</div>
+		
+		
+	</div>	
+	
+	
+	<div class="paid-info">
+		<p> Paid To : </p>
+		<p> PT. Educa8 Dot Info </p>
+		<p class="font-bold"> Bank BCA 	A/C No.
+			 <span class='font-bold' ng-click="info.sembunyi=true" ng-hide="info.sembunyi">  {{info.virtualbca}} </span> 
+			 <span> <input class='input-virtual-name' type='text'  ng-show="info.sembunyi" ng-model='info.virtualbca' ></span>
+		</p>
+		<p> Note : </p>
+		<p>	
+			<ul>
+				<li>Keterlambatan pembayaran dikenakan biaya Rp.10.000,- / hari</li>
+				<li>Untuk pertanyaan lebih lanjut mengenai Invoice dapat di email ke <p style="border-bottom: 1px solid #ccc;width:auto;line-height: 20px;font-family: roboto-medium; display: inline-block;">billing@educa8.info</p> </li>
+				
+				
+			</ul>
+		</p>	
+		<br><br><br>
+		<label class="edu">
+			PT. Educa8 Dot Info
+		</label><br><br><br><br><br><br>
+		
+		<label class="lettersign">
+			Indahwati
+		</label>
+		<br><br><br><br>
+		
+		<div class="attention">
+			Potongan PPH 23 senilai 2% distorkan oleh sekolah ke Kas Negara.
+			Bukti Potongan dikirimkan kembali ke PT.Educa8 Dot Info
+		</div>
+		<br>
+	</div>
+	
+		
+</div>
+<img src="images/bg-bot.png" style="margin-top: -47px;height: 330px;width: 900px;" >
+
+
+
+<script>
+	  $("#print").live("click", function () {
+            var divContents = $("#dvContainer").html();
+            var printWindow = window.open('', '', 'height=1200,width=920');
+            printWindow.document.write('<html><head><title>DIV Contents</title>');
+            printWindow.document.write('<link rel="stylesheet" type="text/css" href="css/ng-explore.css"></head><body>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        });
+		  
+</script>
+
+</body>	
+</html>	
